@@ -1,42 +1,39 @@
 import React from 'react'
+import Team6Logo from '../photos/team-6-logo.png'
 
 const LandingFooter = () => {
   return (
-    <div>
-    <footer className="bg-black rounded-lg shadow m-4 dark:bg-gray-800">
-        <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2023{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
-            Flowbite™
-            </a>
-            . All Rights Reserved.
-        </span>
-         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+    <footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+      <div className="w-full max-w-screen-xl mx-auto p-2 md:py-0">
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <span className="flex items-center mb-4 sm:mb-0">
+            <img
+              src={Team6Logo}
+              className="h-32 w-32 mr-3"
+              alt="Team 6 Logo"
+            />
+            <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+              © 2023{" "}
+              Team 6
+              . All Rights Reserved.
+            </span>
+          </span>
+          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
             <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6 ">
+              <a href="#" className="mr-4 hover:underline md:mr-6 hover:text-green-800">
                 About
-            </a>
+              </a>
             </li>
             <li>
-            <a href="#" className="mr-4 hover:underline md:mr-6">
-                Privacy Policy
-            </a>
+              <a href="#" className="hover:underline hover:text-green-800">
+                Contact
+              </a>
             </li>
-            <li>
-          <a href="#" className="mr-4 hover:underline md:mr-6">
-            Licensing
-          </a>
-        </li>
-        <li>
-          <a href="#" className="hover:underline">
-            Contact
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
+          </ul>
+        </div>
   </div>
+</footer>
+
   )
 }
 
