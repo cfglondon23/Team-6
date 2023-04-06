@@ -5,8 +5,7 @@ import {auth, db} from '/Personal Programming Projects/CodeForGood23/Team-6/clie
 import {createUserWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
 import {collection, addDoc} from 'firebase/firestore'
 import {redirect} from "react-router-dom"
-=======
-import logo from '/Users/r4che/Downloads/c4g team 6/Team-6/client/team-6/src/photos/My project.png'
+
 
 const BusinessAuth = () => {
 

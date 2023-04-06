@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const LandingFooter = () => {
   return (
-    <footer className="bg-gray-900 shadow m-4">
+    <footer className="">
       <div className="w-full max-w-screen-xl mx-auto p-2 md:py-0">
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="flex items-center mb-4 sm:mb-0">
@@ -19,7 +19,7 @@ const LandingFooter = () => {
               . All Rights Reserved.
             </span>
           </span>
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0 dark:text-gray-400">
             <li>
               <a href="#" className="mr-4 hover:underline md:mr-6 hover:text-green-800">
                 About

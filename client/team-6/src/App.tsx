@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './Pages/Landing';
@@ -7,7 +7,9 @@ import BusinessAuth from './Pages/Business_Pages/BusinessAuth';
 import UserAuth from './Pages/User_Pages/UserAuth';
 import Login from './Pages/Login';
 
+
 function App() {
+  
   return (
     <Router>
       <Routes>

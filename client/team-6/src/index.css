@@ -12,3 +12,7 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+
+.landing-page{
+    background-image: url('./Photos/v34_91.png');
+}

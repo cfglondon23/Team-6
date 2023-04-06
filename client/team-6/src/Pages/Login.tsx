@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import {FcGoogle} from 'react-icons/fc'
-import Logo from '/Users/r4che/Downloads/c4g team 6/Team-6/client/team-6/src/photos/My project.png'
-
+import Logo from '/Personal Programming Projects/CodeForGood23/Team-6/client/team-6/src/Photos/My project.png'
 import { Link } from 'react-router-dom'
 import {auth} from '../firebase/firebase'
 import {signInWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
@@ -50,7 +49,7 @@ const Login = () => {
                     <div className='pt-5'>
                     <img src={Logo} className="w-40 h-40 mx-auto" alt="logo"/>
                     </div>
-                    <form onSubmit={LoginSubmit} className="flex flex-col pt-3 md:pt-8">
+                    <form className="flex flex-col pt-3 md:pt-8">
                         <div className="flex flex-col pt-4">
                         <label  className="block mb-2 text-sm font-medium text-slate-300">Email</label>
                             <div className="flex relative ">
@@ -74,7 +73,9 @@ const Login = () => {
                         </div>
                         <button type="submit" className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-[#dce3eb] rounded-md shadow-md hover:text-black hover:bg-white focus:outline-none focus:ring-2">
                             <span className="w-full text-black">
+                                <a href="/Personal Programming Projects/CodeForGood23/Team-6/client/team-6/src\html_Pages/professionl_dashboard/dash.html">
                                 Submit
+                                </a>
                             </span>
                         </button>
                         {/* put two lines with the text or inbetween */}
