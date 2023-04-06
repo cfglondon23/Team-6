@@ -1,9 +1,44 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {FcGoogle} from 'react-icons/fc'
 import Logo from '/Users/r4che/Downloads/c4g team 6/Team-6/client/team-6/src/photos/My project.png'
 
 import { Link } from 'react-router-dom'
+import {auth} from '../firebase/firebase'
+import {signInWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
+import {redirect} from "react-router-dom"
 const Login = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
+    const [name, setName] = useState('')
+
+        const LoginSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+            e.preventDefault()
+            await signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorCode, errorMessage);
+            })
+        }
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // if user is logged in, redirect to the business dashboard
+                redirect('/business/dashboard')
+                // display hello user name in console
+                console.log('hello', user)
+            }
+            else{
+                // if user is not logged in, redirect to the business login page
+                redirect('/Auth/business')
+            }
+
+        })
 
 
 
@@ -15,17 +50,17 @@ const Login = () => {
                     <div className='pt-5'>
                     <img src={Logo} className="w-40 h-40 mx-auto" alt="logo"/>
                     </div>
-                    <form className="flex flex-col pt-3 md:pt-8">
+                    <form onSubmit={LoginSubmit} className="flex flex-col pt-3 md:pt-8">
                         <div className="flex flex-col pt-4">
-                        <label  className="block mb-2 text-sm font-medium text-slate-300">Your name</label>
+                        <label  className="block mb-2 text-sm font-medium text-slate-300">Email</label>
                             <div className="flex relative ">
-                                <input type="text" id="design-login-email" className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-[#dce3eb] text-gray-700 rounded-md placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" placeholder="Email"/>
+                                <input onChange={(e) => setEmail(e.target.value)} type="text" id="design-login-email" className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-[#dce3eb] text-gray-700 rounded-md placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" placeholder="Email"/>
                             </div>
                         </div>
                         <div className="flex flex-col pt-4 mb-12">
                         <label  className="block mb-2 text-sm font-medium text-slate-300">Password</label>
                             <div className="flex relative ">
-                                <input type="password" id="design-login-password" className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-[#dce3eb] text-gray-700 rounded-md placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" placeholder="Password"/>
+                                <input onChange={(e) => setPassword(e.target.value)} type="password" id="design-login-password" className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-[#dce3eb] text-gray-700 rounded-md placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent" placeholder="Password"/>
                             </div>
                         </div>
 
