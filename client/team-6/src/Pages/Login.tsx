@@ -1,6 +1,7 @@
 import React from 'react'
 import {FcGoogle} from 'react-icons/fc'
-import Logo from '../Photos/My project.png'
+import Logo from '/Users/r4che/Downloads/c4g team 6/Team-6/client/team-6/src/photos/My project.png'
+
 import { Link } from 'react-router-dom'
 const Login = () => {
 
