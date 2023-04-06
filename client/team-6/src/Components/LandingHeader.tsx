@@ -1,6 +1,8 @@
+
 import React,{useState, useEffect} from 'react'
 import ResLogo from '/Personal Programming Projects/CodeForGood23/Team-6/client/team-6/src/Photos/res-logo.png'
 import { Link } from 'react-router-dom'
+
 
 const LandingHeader = () => {
   const [open, setOpen] = useState(false);
@@ -11,7 +13,7 @@ const LandingHeader = () => {
 
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
+    <nav className="bg-gray-900 border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a className="flex items-center">
           <img
@@ -29,6 +31,7 @@ const LandingHeader = () => {
   aria-expanded={open ? 'true' : 'false'}
 >
 
+
           <span className="sr-only">Open main menu</span>
           <svg
             className="w-6 h-6"
@@ -44,9 +47,9 @@ const LandingHeader = () => {
             />
           </svg>
         </button>
-    <div className={`${
-            open ? 'block' : 'hidden'
+        <div className={`${open ? 'block' : 'hidden'
           } w-full md:block md:w-auto mt-4 md:mt-0`}
+
           >
       <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <li>

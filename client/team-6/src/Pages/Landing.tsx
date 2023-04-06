@@ -1,12 +1,13 @@
 import React from 'react'
 import LandingHeader from '../Components/LandingHeader'
 import LandingFooter from '../Components/LandingFooter'
+import LandingContent from '../Components/LandingContent'
 
 const Landing = () => {
   return (
     <div>
       <LandingHeader/>
-        <p className='text-center'>Hello</p>
+      <LandingContent/>
       <LandingFooter/>
     </div>
   )
