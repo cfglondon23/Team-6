@@ -1,5 +1,6 @@
 import React from 'react'
-import Team6Logo from '../photos/team-6-logo.png'
+import Team6Logo from '../Photos/team-6-logo.png'
+import { Link } from 'react-router-dom'
 
 const LandingFooter = () => {
   return (
