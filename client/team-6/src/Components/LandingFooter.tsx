@@ -3,7 +3,7 @@ import Team6Logo from '../photos/team-6-logo.png'
 
 const LandingFooter = () => {
   return (
-    <footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+    <footer className="bg-gray-900 shadow m-4">
       <div className="w-full max-w-screen-xl mx-auto p-2 md:py-0">
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="flex items-center mb-4 sm:mb-0">
