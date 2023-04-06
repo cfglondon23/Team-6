@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '/Personal Programming Projects/CodeForGood23/Team-6/client/team-6/src/Photos/My project.png'
+import logo from '/Users/r4che/Downloads/c4g team 6/Team-6/client/team-6/src/photos/My project.png'
 
 const BusinessAuth = () => {
   return (
